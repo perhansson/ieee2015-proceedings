@@ -1,0 +1,281 @@
+%% NSS-MIC_Instructions.tex
+%% 8/2007
+%% By Bo Yu (yu@bnl.gov)
+%% based on:
+%% bare_jrnl.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% see http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE journal paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+\documentclass[journal]{IEEEtran}
+\usepackage{graphicx}
+
+\begin{document}
+\title{Preparation of Manuscripts for the\\
+2007 IEEE Nuclear Science Symposium\\
+and Medical Imaging Conference}
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+\author{First~A.~Author,~\IEEEmembership{Member,~IEEE,}
+        Second~B.~Author,~\IEEEmembership{Fellow,~OSA,}
+        and~Third~C.Author,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
+\thanks{Manuscript received November 4, 2007. (Write the date on which you submitted your paper for review.) This work was supported in part by the U.S. Department of Commerce under Grant No. BS123456 (sponsor acknowledgment goes here).}% <-this % stops a space
+\thanks{Full names of authors are preferred in the author field, but are not required. Put a space between authors' initials. Do not use all uppercase for authors' surnames.}%
+\thanks{F. A. Author is with the National Institute of Standards and Technology, Boulder, CO 80303 USA (telephone: 303-497-3650, e-mail: author @boulder.nist.gov).}%
+\thanks{S. B. Author, Jr., was with Rice University, Houston, TX 77005 USA. He is now with the Department of Physics, Colorado State University, Ft. Collins, CO 80523 USA (telephone: 970-491-6206, e-mail: author@lamar. colostate.edu).}%
+\thanks{T. C. Author is with the Electrical Engineering Department, University of Colorado, Boulder, CO 80309 USA, on leave from the National Research Institute for Metals, Tsukuba, Japan (e-mail: author@nrim.go.jp).}%
+}
+
+\maketitle
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\begin{abstract}
+These instructions provide guidelines for preparing manuscripts for submission to the Conference Record (CR) of the 2007 IEEE Nuclear Science Symposium and Medical Imaging Conference. If you are using {\LaTeX} to prepare your manuscript, you may use this document as a template. Define all symbols used in the abstract. Do not cite references in the abstract. 
+\end{abstract}
+
+%\begin{IEEEkeywords}
+%IEEEtran, journal, \LaTeX, paper, template.
+%\end{IEEEkeywords}
+
+
+\section{Introduction}
+% The very first letter is a 2 line initial drop letter followed
+% by the rest of the first word in caps.
+% 
+% form to use if the first word consists of a single letter:
+% \IEEEPARstart{A}{demo} file is ....
+% 
+% form to use if you need the single drop letter followed by
+% normal text (unknown if ever used by IEEE):
+% \IEEEPARstart{A}{}demo file is ....
+% 
+% Some journals put the first two words in caps:
+% \IEEEPARstart{T}{his demo} file is ....
+% 
+% Here we have the typical use of a "T" for an initial drop letter
+% and "HIS" in caps to complete the first word.
+\IEEEPARstart{T}{his} document is an example of preparing your manuscript in {\LaTeX}. It provides instructions for authors that will be presenting a paper at the 2007 IEEE Nuclear Science Symposium and Medical Imaging Conference (NSS-MIC), and should be used in preparing and submitting manuscripts to the Conference Record (CR). The Conference Record is a non-refereed, CD-ROM-based publication that is distributed to all conference attendees after the conference. All CR manuscripts will be made available online at http://www.nss mic.org/2007/ConferenceRecord before the CD-ROMs are mailed out. A detailed description of the CR submission procedure is provided in section II below. Submission of a manuscript to the CR is mandatory and an eight page limit is suggested.
+
+You may submit your manuscript to the IEEE Transactions on Nuclear Science (TNS), if it represents significant original contributions in the fields associated with the NSS-MIC (i.e., progress reports and preliminary findings are not appropriate).  The TNS is a refereed publication, and is published throughout the year.  There is no longer ``Conference Issue'' of TNS dedicated to the NSS-MIC, and therefore you can submit your manuscript to TNS at any time. For instructions on TNS manuscript submissions, please visit the IEEE's on-line peer review system Manuscript Central (http://tns-ieee.manuscriptcentral.com/).  Please note that submission to TNS is a totally separate process from that of the Conference Record.
+
+You can download this document, and the MS Word template, from the 2007 NSS-MIC conference web site at http://www.nss-mic.org/2007/publications.html so that you can use it to prepare your manuscript.  For authors using word processors other than {\LaTeX} or Word, please refer to the NSS-MIC07.DOC file for page layout guidelines. 
+
+
+\section{Procedure for Manuscript Submission}
+
+All manuscripts for the Conference Record must be submitted electronically in PDF format through the conference website. The deadline for submission of your manuscript is Friday, Nov. 16, 2007. All questions regarding CR submission should be directed to Bo Yu, the Guest Editor, at yu@bnl.gov. At the conference, the Guest Editor will be available during the coffee and lunch break periods on Thursday and Friday in the {\it Tiare Suite}.
+
+\subsection{Create IEEE Xplore-Compatible PDF File}
+
+Starting 2005, all conference record manuscripts submitted to IEEE must meet the PDF Specification for IEEE Xplore\cite{IEEEPDFRequirement401}. To assist authors in meeting this requirement, IEEE has established a web based service called PDF eXpress. You can use this web service to convert your word processor files into Xplore-compatible PDF files, or to check if your own PDF file is Xplore-compatible. PDF eXpress converts the following file types to PDF: Microsoft Word, Rich Text Format (RTF), {\TeX} (dvi and all support files required), PageMaker, FrameMaker, Word Pro, QuarkXpress,  and WordPerfect.
+
+The PDF eXpress service will be available to the NSS-MIC authors between October 1 and November 16, 2007.  To use this service, go to http://216.228.1.34/pdfexpress/log.asp.  Enter {\bf nssmic07} as the Conference ID.  If you are a first time user of this system, you need to set up an account.  Once logged in, follow the instructions on the web site to upload your word processor file or PDF file.  Shortly after your file is uploaded to the PDF eXpress, you will receive an email. If you uploaded a word processor file for conversion, the attachment in this email will be the converted Xplore-compatible PDF file.  Save this file for the submission step outlined in section II.B below.  If you uploaded a PDF file for checking, the email will show if your file passed or failed the check.  If your PDF file failed the check, read the error report and fix the identified problem(s).  Re-upload your PDF file and have it checked again until your PDF file is Xplore-compatible.
+
+You can also bypass the PDF eXpress service and create your own Xplore-complatible PDF files.  The key requirements are the following:
+\begin{itemize}
+\item[1]	Do not protect your PDF file with any password;
+\item[2]	Embed all fonts used in the document;
+\item[3]	Do not embed any bookmarks or hyperlinks.
+\end{itemize}
+
+A detailed description of the IEEE Xplore-compatible PDF requirement is available at http://www.ieee.org/portal/cms\_docs/pubs/confstandards/pdfs/ IEEE-PDF-SpecV401.pdf \cite{IEEEPDFRequirement401}.  If you are using a Windows version of the Adobe Distiller to create PDF files, you can download a set of job option files (for Acrobat versions 5 through 8) from http://www.nss-mic.org/2007/publications/xplore\_distiller\_files.ZIP. Install and use the appropriate job option to create your own Xplore-compatible PDF files.  IEEE has also provided a list of settings for Ghostscript through GhostView: http://216.228.1.34/pdfexpress/GS81-IEEEXplore\_config.pdf.
+If you are using other software to generate PDF files, please refer to their manuals for correct conversion settings.  The most common problem in creating Xplore-compatible PDF files is not embedding all fonts.
+
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.5in]{myFigure.eps}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+\caption{Daily abstract submission rate of the 2007 NSS-MIC. }
+\label{fig_sim}
+\end{figure}
+
+% Note that IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command, the
+% \label for the overall figure must come after \caption.
+% \hfil must be used as a separator to get equal spacing.
+% The subfigure.sty package works much the same way, except \subfigure is
+% used instead of \subfloat.
+%
+%\begin{figure*}[!t]
+%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+
+
+% An example of a floating table. Note that, for IEEE style tables, the 
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that IEEE does not put floats in the very first column - or typically
+% anywhere on the first page for that matter. Also, in-text middle ("here")
+% positioning is not used. Most IEEE journals use top floats exclusively.
+% Note that, LaTeX2e, unlike IEEE journals, places footnotes above bottom
+% floats. This can be corrected via the \fnbelowfloat command of the
+% stfloats package.
+
+
+
+% if have a single appendix:
+%\appendix[Proof of the Zonklar Equations]
+% or
+%\appendix  % for no appendix heading
+% do not use \section anymore after \appendix, only \section*
+% is possibly needed
+
+% use appendices with more than one appendix
+% then use \section to start each appendix
+% you must declare a \section before using any
+% \subsection or using \label (\appendices by itself
+% starts a section numbered zero.)
+%
+\vfill
+
+\subsection{Submit the Manuscript and Copyright Form}
+
+After you have obtained the Xplore-compatible PDF file, log on to the NSS-MIC conference web site (http://www.nss-mic.org/2007) using the username and password for your abstract submission.  Go to the ``My Submissions'' link and check that your paper title and author list are consistent with those in your manuscript. Make appropriate changes using the ``Update Abstract'' button if needed. Click on the ``Upload manuscript'' button to transfer your PDF file.  Your PDF file will be checked again for Xplore-compatibility. PDF files that fail the check will not be included in the Conference Record CD.
+
+An IEEE Copyright Form should be submitted electronically at the same time your Xplore-compatible manuscript is submitted. Click on the ``Submit Copyright Form'' button on the ``My Abstracts'' link and follow the instructions.  Each manuscript submitted to the Conference Record must be accompanied by a corresponding copyright form. 
+
+
+
+
+\appendices
+\section{}
+Appendices, if needed, appear before the acknowledgment.
+
+% use section* for acknowledgement
+\section*{Acknowledgment}
+The preferred spelling of the word ``acknowledgment'' in American English is without an ``e'' after the ``g.'' Use the singular heading even if you have many acknowledgments. Avoid the expression, ``One of us (S.B.A.) thanks ...'' Instead, write ``S.B.A. thanks ...'' Put sponsor acknowledgments in the unnumbered footnote on the first page.
+
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\begin{thebibliography}{1}
+
+\bibitem{IEEEhowto:kopka}
+H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+\bibitem{IEEEPDFRequirement401}
+IEEE Content Engineering, \emph{PDF Specification for IEEE Xplore}. Available: http://www.ieee.org/portal/cms\_docs/pubs/confstandards/pdfs/IEEE-PDF-SpecV401.pdf.
+
+\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
+
+
