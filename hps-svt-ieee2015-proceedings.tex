@@ -49,6 +49,8 @@
 \usepackage{graphicx}
 
 \newcommand{\Aprime}{\ensuremath{\mathrm{A}^\prime}}
+\newcommand{\fluenceunit}{1~MeV~neutron~equivalent/cm\ensuremath{^2}}
+
 
 
 \begin{document}
@@ -129,64 +131,72 @@ couple to any of the known forces that are common in many new physics scenarios~
 The Heavy Photon Search experiment (HPS) is a new fixed-target experiment~\cite{proposal_full}
 specifically designed to discover an \Aprime{} with m$_{\Aprime}=20-500$~MeV, produced through bremsstrahlung 
 in a tungsten target and decaying into an $e^{+}e^{-}$ pair. 
+
+
+\section{The Heavy Photon Search Experiment}
+The Heavy Photon Search experiment (HPS) is a new fixed-target experiment~\cite{proposal_full}
+specifically designed to discover an \Aprime{} with m$_{\Aprime}=20-500$~MeV, produced through bremsstrahlung 
+in a tungsten target and decaying into an $e^{+}e^{-}$ pair.  
 In particular, the HPS experiment has sensitivity to the challenging region with small cross sections out of 
 reach from collider experiments and where thick absorbers, as used in beam-dump experiments to 
-reject backgrounds, are ineffective due to the relatively short \Aprime{} decay length ($<1$~m).  
+reject backgrounds, are ineffective due to the relatively short \Aprime{} decay length ($<1$~m)~\cite{bible}.  
 This is accomplished 
 by placing a compact silicon tracking and vertex detector (SVT) in a magnetic field, immediately downstream (10~cm) 
-of a thin ($\sim 0.125\%~X_{0} $) target to reconstruct the mass and decay vertex position of  the \Aprime{}.
+of a thin ($\sim 0.125\%~X_{0} $) target to reconstruct the mass and decay vertex position of  the \Aprime{}. A 
+rendered overview of HPS is shown in Fig.~\ref{fig:hps-layout}.
+\begin{figure}[]
+\centering
+\includegraphics[width=3.5in]{hps-layout-cropped}
+\caption{A rendered overview of the HPS detector.}
+\label{fig:hps-layout}
+\end{figure}
 
-
-HPS  runs in Hall~B at Thomas Jefferson National Accelerator Facility (JLab) using the CEBAF 
+HPS runs in Hall~B at Thomas Jefferson National Accelerator Facility (JLab) using the CEBAF 
 accelerator electron beam with an energy of 1.05~GeV and 50~nA current, with planned operation of up to 6.6~GeV and 450~nA. 
 The kinematics of \Aprime{} production 
 typically results in final state particles within a few degrees of the incoming beam, especially at low $m_{\Aprime}$ . 
 Because of this, the apparatus must accommodate passage of the beam 
 downstream of the target and operate as close to the beam as possible. Because background rates in this region from the 
-scattered beam are very large, a fast lead-tungstate crystal calorimeter trigger with 250~MHz FADC readout [ref] and 
-excellent time tagging of hits is used to select interesting data and reduce the bandwidth required to transfer data from the 
+scattered beam are very large, a fast lead-tungstate crystal calorimeter trigger with 250~MHz FADC readout~\cite{fadc250} and 
+an excellent time tagging of hits is used to select interesting data and reduce the bandwidth required to transfer data from the 
 detector.  This method of background reduction is the motivation for operating HPS in a
 nearly continuous beam: in a beam with large per-bunch charge, background from a single bunch would fully occupy the detector 
 at the required beam intensity. 
 
 
 
-
-
 \section{The Silicon Vertex Tracking Detector}
-
-\begin{figure}[]
-\centering
-\includegraphics[width=0.4\textwidth]{occupancy.pdf}
-\caption{Occupancy per strip ($60~\mu$m readout pitch) in Layer 1 of the SVT for 
-8~ns of beam at 400~nA.}
-\label{fig:occupancy}
-\end{figure}
-\begin{figure}[]
-\centering
-\includegraphics[width=0.4\textwidth]{PastedGraphic-1.png}
-\caption{View of the SVT from upstream before installation of the target and final cabling.}
-\label{fig:reach}
-\end{figure}
-At beam energies necessary to achieve sensitivity to \Aprime{} in the most interesting mass range for HPS, 
-multiple scattering dominates the measurement uncertainty, and in particular dictates the 
-achievable vertex position resolution for any practical material budget. The main design guidelines are 
-therefore to minimize the material budget in the tracking volume, and the distance to the beam in order 
-to increase acceptance for low $m_{\Aprime}$, while keeping the occupancy under control.   
-Furthermore, the whole tracker has to operate in vacuum to avoid secondary backgrounds from 
-beam gas interactions, and have retractable tracking planes and easy access for sensor replacement to 
-increase safety. 
+The Silicon Vertex Tracker (SVT) allows for precise and efficient reconstruction of charged particle and their trajectories. 
+%The design was driven mainly by the specific physics signature of \Aprime{} production and decay and the constraints from the environment 
+%at the interaction region. 
+At beam energies between 1.0-6.6~GeV, the $e^{+}e^{-}$ pair from the \Aprime{}  
+decay will emanate with momenta between 0.4-2~GeV$/c$ and an angle of 10-100~mrad from the beamline. The dominant 
+tracking uncertainty in this regime is multiple Coulomb scattering and the SVT needs to minimize the amount of material in the tracking 
+volume. With an approximate goal of 2\% mass resolution and a $\approx 1$~m long tracking volume (determined by existing vacuum chamber) 
+and 0.25~T (for 1~GeV beam energy) magnetic field,  a 1\%~$X_0$ or less material per 3D tracking hit and 
+six layers was determined adequate. 
+For low kinetic mixing angles, the \Aprime{} maybe be long-lived and the $e^{+}e^{-}$ pair decay vertex might be displaced several 
+cm's downstream of the target foil. To discover rare \Aprime{} displaced decays, the SVT typically needs a prompt rejection of roughly 
+10$^7$ at 1~cm vertex resolution~\cite{proposal_full}. In order to reach that performance, the first layer of the SVT needs to be placed 
+10~cm from the target. At that distance, the large hit rates from beam electrons undergoing Coulomb scattering in the target allows placing 
+the first layer 1.5~mm from the beam. The intense radiation thus creates a 15~mrad "dead zone" throughout the experiment where no 
+instrumentation can be placed. The expected radiation dose peaks at $10^{15}$~electrons/cm$^2$/month, or roughly 
+$3 \times 10^{13}$~\fluenceunit{}/month~\cite{dose}, close to the beam and places further constraints on the sensor 
+technology.  Furthermore, the whole tracker has to operate in vacuum to avoid secondary backgrounds from 
+beam gas interactions, and have retractable tracking planes and easy access for sensor replacement to increase safety. 
 Given the high hit density, the fast time response, and good resolution and radiation hardness needed; silicon microstrip 
 sensors are the technology of choice for the tracker. Pixel sensors suitable for instrumenting our large acceptance are either too slow
 or have an unacceptable material budget.
-Each of the six tracking layers, arranged in two halves both above and below the beam, consists of placing Hamamatsu Photonics Corporation silicon microstrip sensors back-to-back, with 
-50 or 100~mrad stereo angle.  These are $320~\mu$m thick, $p$+-on-$n$, 
-AC coupled, polysilicon-biased sensors with 60 (30)~$\mu$m readout (sense) pitch, readily available at low cost from the cancelled 
-D0 RunIIb upgrade~\cite{d0run2b}. The overall area of 1440~cm$^2$ has in total 23,040 channels. 
-The optimized design, with the first layer placed only 10~cm downstream of the target to give 
-excellent 3D vertexing performance, has a 15~mrad dead zone above and below the beam axis, putting the active silicon only 
-1.5~mm from the the center of the beam where hit densities reach 4~MHz/cm$^2$ with per-strip 
-occupancies kept $<1$\%, as shown in Fig.~\ref{fig:occupancy}. 
+
+
+\subsection{Layout}
+The SVT overall layout is rendered in Fig.~\ref{fig:layout} and summarized in Tab.~\ref{tab:layout}. 
+\begin{figure}[]
+\centering
+\includegraphics[width=3.5in]{svt-layout.png}
+\caption{A rendered overview of the SVT installed on the beamline.}
+\label{fig:layout}
+\end{figure}
 \begin{table}
 \centering
 \begin{tabular}{|lcc|}
@@ -194,56 +204,261 @@ occupancies kept $<1$\%, as shown in Fig.~\ref{fig:occupancy}.
 Layer $\rightarrow$& 1-3 & 4-6 \\ 
 \hline
 $z$ pos. (cm)  & 10-30 & 50-90  \\
-Stereo angle  & $90^{\circ}$ & 50~mrad  \\
-Bend res. ($\mu$m)  & $\approx 6$ & $\approx6$  \\
-Stereo res. ($\mu$m)  & $\approx 6$ & $\approx130$  \\
+Stereo angle (mrad)  & 100 & 50  \\
+Non-bend plane res. ($\mu$m)  & $\approx 6$ & $\approx6$  \\
+Bend plane res. ($\mu$m)  & $\approx 130$ & $\approx 130$  \\
 \hline
 \end{tabular}
 \caption{Main tracker parameters.}
-\label{tab:svtparams}
+\label{tab:layout}
 \end{table}
-To resolve overlapping hits in time and thus help to reject background and improve pattern recognition 
-in the area closest to the beam, a 2~ns single hit time resolution is achieved by using the APV25 front-end readout 
-ASIC initially developed for the CMS detector at CERN~\cite{apv25} operating in multi-peak mode. 
-The APV25 chips, wire-bonded to the end of the sensor, are mounted on FR4 hybrid boards. A half-module is built by 
-a sensor and hybrid glued to a polyimide-laminated carbon fiber composite backing keeping cooling and electrical services 
-outside the tracking volume\cite{paper_testrun}. 
-For tracking layers 4-6, double length half-modules are built with hybrids at each end to increase 
-acceptance. Placing two half-modules, with each hybrid end sandwiched around an aluminum 
-cooling block, back-to-back with a 50 or 100~mrad stereo angle gives the required 3D space point resolution and 
-conducts heat from the sensor to the cooled support structure to remove $\sim1.7$~W of power per hybrid. The silicon operates at 
--10$^{\circ}$C to withstand high localized radiation doses up to $1 \times 10^{14}$~1~MeV neutron eq. fluence. 
-Critical to minimizing the multiple scattering uncertainty, a material budget of less than 0.7\%~$X_{0}$ per layer is obtained. 
-Layer 1-3 and 4-6 , top and bottom modules, are mounted directly on cooled U-channels precision mounted on kinematic mounts.  
-A lever arm extending upstream to a motor controlled high-precision vertical linear shift gives an adjustable distance to the beam 
-plane for the L1-3 the top and bottom halves of the tracker. Mounting the four U-channel support structure on rails allows removal 
-of the tracker from the vacuum chamber with minimal intervention. Figure~\ref{fig:svt1} shows the four U-support channels 
-complete with modules.
+Each of the six tracking layers, 
+arranged in two halves both above and below the beam to avoid the "dead zone", consists of placing silicon microstrip sensors back-to-back. 
+The first three layers have a 100~mrad stereo angle between the sensors and the last three have 50mrad in order to improve the pointing 
+resolution to the vertex. The first layer is located only 10~cm downstream of the target to give excellent 3D vertexing performance which, 
+with the 15~mrad dead zone above and below the beam axis, puts the active silicon only 1.5~mm from the center of the beam. Hit densities 
+in the most active region reaches 4~MHz/mm$^2$ and about 1\% occupancy for the strips closest to the beam, see Fig.~\ref{fig:occupancy}.
+\begin{figure}[]
+\centering
+\includegraphics[width=3in]{occupancy.pdf}
+\caption{Occupancy per strip ($60~\mu$m readout pitch) in Layer 1 of the SVT for 
+8~ns of beam at 400~nA~\cite{proposal_full}.}
+\label{fig:occupancy}
+\end{figure}
 
-Six analog samples from the APV25 chips at 41.66~MHz from up to four hybrid boards are sent on twisted pair magnet wire 
-to a total of 10 Front End Boards (FEB). Each FEB digitizes and transfers up to 3.3~Gb/s of data using high-speed serial links to 
-Xilinx Zynq based data processing modules on the ATCA based SLAC RCE platform~\cite{paper_testrun} for zero suppression 
-and event building. 
+\subsection{Sensors and Front-End Readout}
+The sensors are $p+$-on-$n$, single-sided, AC-coupled, polysilicon-biased microstrip sensors 
+with 30 (60)~$\mu$m sense (readout) 
+pitch fabricated by Hamamatsu Photonics Corporation for the cancelled D\O Run~2b upgrade~\cite{d0run2b}. These  
+sensor are $4\times10$~cm$^2$ and $320~\mu$m thick, matching the required material budget and single hit resolution (better than 
+50~$\mu$m). The sensors were qualified to withstand at least 1~kV bias in order to tolerate the $1.5\times10^{14}$~\fluenceunit{} for a 
+six month run without much degradation. 
+
+One of the key requirements for the SVT is hit time resolution of about 2~ns in order to reject background and improve pattern recognition 
+for tracking close to the beam where occupancies are high. This is achieved by using the APV25 front-end readout Application Specific Integrated 
+Circuit (ASIC)~\cite{apv25},  developed for the 
+Compact Muon Solenoid experiment at the Large Hadron Collider. The APV25 is an analog pipeline ASIC with 128 channels of preamplifier 
+and shaper, feeding a 192 long pipeline ASIC with analog memory. In the so-called "multi-peak" readout mode, the APV25 presents 
+three consecutive samples of the pipeline upon an APV25 readout trigger signal. By sending two APV25 readout triggers for every trigger signal 
+from the electromagnetic calorimeter, six analog samples of the pulse shape, see Fig.~\ref{fig:pulseshape}, is obtained at a sampling rate of 
+41~MSPS. This pulse shape can be analyzed and fitted to extract the t$_0$ of the hit~\cite{Friedl:2009zz}.
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{pulseshape.png}
+\caption{Pulse shape of the APV25 ASIC.}
+\label{fig:pulseshape}
+\end{figure}
+The details of the APV25 ASIC is shown in Tab.~\ref{tab:apv25}: the 44~$\mu$m pitch, low noise and operation using either polarity together with the 
+proven robustness and radiation hardness is a good fit for the SVT. 
+\begin{table}
+\centering
+\begin{tabular}{|l|c|}
+\hline
+Technology & 0.25~$\mu$m \\ 
+\hline
+Channels & 128 \\
+\hline
+Input pitch & 44~$\mu$m \\
+\hline
+Noise [ENC e$^-$] & $270 + 36\times$C~(pF)\\
+\hline
+Power consumption & 350mW \\
+\hline
+\end{tabular}
+\caption{Main APV25 ASIC parameters.}
+\label{tab:apv25}
+\end{table}
+The sensor and APV25 chip can be seen in Figure~\ref{fig:half-modules-L1-3}.
+
+\subsection{Module Design}
+Five APV25 chips are mounted on FR4 hybrid boards and wire-bonded to the end of the sensor. 
+The hybrid boards, located outside the tracking volume, 
+provide power and filtering circuitry for the high voltage bias and a temperature sensor. A hybrid and a sensor, glued to a polyimide-laminated 
+carbon fiber composite backing, make up a so-called "half-module" for the first three layers. 
+To increase acceptance, the half-modules for layers 4-6 have two sensors mounted next to each other and are read out from opposed ends. 
+Space constraints required these hybrids to be slightly 
+smaller for those half-modules and instead of Teflon-coated twisted pair wires soldered directly to the FR4 board as in layer 1-3, these 
+have BGA mounted high density connectors to transfer signal, power and high voltage bias on and off the hybrid. 
+Figure~\ref{fig:half-modules-L1-3} and~\ref{fig:half-modules-L4-6} shows a complete layer 1-3 and a 4-6 half-module under assembly, 
+respectively.
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{halfmodule-L1-3.png}
+\caption{Half-module used to build modules for the three most upstream layers.}
+\label{fig:half-modules-L1-3}
+\end{figure}
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{halfmodule-L4-6-assembly.png}
+\caption{Half-module used to build modules for the three downstream layers.}
+\label{fig:half-modules-L4-6}
+\end{figure}
+
+
+Modules are built from placing two half-modules, with each hybrid end sandwiched around an aluminum 
+cooling block, back-to-back with a 50 or 100~mrad stereo angle which gives the required 3D space point resolution. The cooling block 
+extends a few millimeter under the sensor in order to more efficiently transfer heat out of the sensors. For layer 1-3 modules, the 
+cooling block serves as the fixed part of a support where the opposed end of the half-modules are screwed to an aluminum 
+bar with a pivot engaging a screw-adjusted spring, see Fig.~\ref{fig:half-modules-L1-3}. 
+This spring-tensioned module support allows keeping the sensors, with its carbon fiber backing, straight with essentially zero support material 
+and to absorb thermal expansion mismatch. The same principle is used for layer 4-6 where one of the cooling blocks are pinned to the spring. 
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{uchannel-L4-6.png}
+\caption{A u-channel for layer 4-6 holding three detector modules.}
+\label{fig:uchannels-L4-6}
+\end{figure}
+
+\subsection{Support and Cooling}
+Three modules are screwed directly on to a aluminum "u-channel", see Fig.~\ref{fig:uchannels-L4-6} and~\ref{fig:uchannels}, that are 
+actively cooled by coolant circulating in a 1/4" copper tube pressed into a machined grove. 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3.5in]{2014-1111-1596-heavy_photon_search-2.jpg}
-\caption{The four U-channels, layers 1-3 (closest) with the detector modules mounted. }
-\label{fig:svt1}
+\includegraphics[width=3.0in]{2014-1111-1596-heavy_photon_search-2.jpg}
+\caption{All four u-channels (layers 1-3 closest) with detector modules mounted. The flexible cooling hoses and support rods for layer 1-3 
+can be seen extending towards the camera view. }
+\label{fig:uchannels}
 \end{figure}
+Four U-channels, two for L4-6 and two for L1-3, roll in to a rigid support box on guide rails to precision kinematic mounts. The support box, 
+shown in Fig.~\ref{fig:svt-box}, sits inside the JLab Hall~B analyzing magnet magnet chamber on four adjustable supports, essentially matching 
+the inner size to within a few millimeters. In order to provide the rigidity needed for precision mounting of the u-channels, a square "support ring" 
+is located at the inner mounting point for the u-channels. That support ring also provide guiding holes and support for the flexible hoses connecting 
+to the press-fit tube in the layer 4-6 u-channels. 
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{svt-box.jpg}
+\caption{The SVT support box with the upstream vacuum box for services.}
+\label{fig:svt-box}
+\end{figure}
+The upstream end of the layer 1-3 u-channels are attached to a rigid support 
+rod extending upstream to vertical linear shifts. Moving the vertical linear shifts allows the layer 1-3 u-channels to rotate up to 1.3$^{\circ}$ and the 
+layer 1 sensors to move more than 7~mm from the beam, allowing clean passage of the beam during beam setup. The linear 
+shifts, one for top and one for bottom,  penetrate vacuum through bellows and are remote-controlled by a precision stepper motor that allows the 
+placement of the layer 1 sensors that are closest to the beam with  $6~\mu$m steps and $<50~\mu$m reproducibility after calibration under vacuum.
+A similar linear shift setup is used to hold and move the target in the right position. 
+The  flanges for vacuum penetration are located on a custom support box that attaches to the upstream end of the JLab Hall~B analyzing 
+magnet as seen in Fig.~\ref{fig:vacuum-box}. In addition to the linear shift flanges, it has flanges for cooling lines and electrical services and the 
+upstream interface to the beamline. 
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{vacuum-box.png}
+\caption{View from upstream, electron side, of the SVT after installation on the beamline. The vacuum box, that interfaces the beamline with the 
+vacuum chamber, can be seen with its three linear shifts, two on the top and one on the bottom side. The flange holding the power and 
+high-voltage sensor bias vacuum penetration boards extends to the right from the support box.}
+\label{fig:vacuum-box}
+\end{figure}
+
+An aluminum plate with data acquisition boards, see Fig.~\ref{fig:febs}, slide in to the chamber in a machined grove in the support box. 
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{febs.png}
+\caption{The partially cabled data acquisition front end boards  screwed to the aluminum support plate before installation .}
+\label{fig:febs}
+\end{figure}
+HFE coolant is circulated through the u-channels (at about -20$^{\circ}$~C) keeping the silicon at approximately at roughly 
+-10$^{\circ}$C to withstand the high localized radiation dose. Water at 20$^{\circ}$~C is used to cool the data acquisition boards.
+
+
+
+\subsection{Data Acquisition}
+
+Six analog samples at 41.66~MSPS from the APV25 chips, from up to four hybrids, are sent on twisted pair magnet wire 
+to a total of 10 Front End Boards (FEB) seen in Fig.~\ref{fig:febs}. Each FEB digitizes and transfers data at up to 3.3~Gb/s using high-speed 
+serial links to Xilinx Zynq based data processing modules on the ATCA based SLAC RCE platform~\cite{paper_testrun} for zero suppression 
+and event building.
 Each FEB also handles power regulation and monitoring as well as high voltage sensor bias distribution to each of the attached 
 hybrids. To shorten the distance of analog 
-signal transfer, the FEBs are fitted inside the vacuum chamber, pressed against thermal pads on each side of a 1/2$"$ cooled support plate on the upstream positron side, which has a less intense radiation environment. Borated high-density polyethylene is used to 
+signal transfer, the FEBs are fitted inside the vacuum chamber, pressed against thermal pads on each side of a 1/2$"$ cooled support plate on the 
+upstream positron side, which has a less intense radiation environment. Borated high-density polyethylene is used to 
 further lower the risk of damage from radiation emitted by the nearby target.
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{cob.png}
+\caption{One COB ATCA blade used in the RCE platform.}
+\label{fig:cob}
+\end{figure}
+Data from three or four FEBs are routed via short, flexible mSAS cables to four flange boards. These are FR4 boards potted through slots in the 
+8" vacuum flange on the upstream positron side of the vacuum box. On the air side of the boards, signals are converted to optical and transferred to 
+the DAQ platform about 30~m away. A similar mechanical technique is used on the opposite side of the vacuum box to bring in low voltage power 
+and high voltage sensor bias into the chamber; this can be seen in Fig.~\ref{fig:vacuum-box}.
 
-Multiple scattering of the low momentum electrons are the dominant factor in limiting tracking performance. Impact parameters 
-between 350~$\mu$m and 100~$\mu$m for track momentum between 0.25 and 1.7~GeV$/$c and a 5\% momentum resolution 
-is achieved. With a precise 3D vertex resolution from the three most upstream layers with large stereo angles, and using the 
-$\sim40~\mu$m wide beam spot as a constraint, full track reconstruction simulation show a $\sim 10^7$ rejection of prompt 
-backgrounds. This ensures good sensitivity for \Aprime{} decay lengths larger than 1~cm. 
+An overview of the data flow across the RCE platform is shown in Fig.~\ref{fig:rce}.
+\begin{figure}[]
+\centering
+\includegraphics[width=3.5in]{rce.png}
+\caption{Schematic overview of the SVT DAQ.}
+\label{fig:rce}
+\end{figure}
+Data from 10 FEBs are split and sent to 14 processing nodes on two ATCA blades, called 
+Cluster On Board (COB). The processing nodes, known as Reconfigurable Cluster Elements (RCE) are based on Xilinx Zync 7000 series 
+system-on-chip which has a dual ARM Cortex A9 processor tightly coupled to a 28nm FPGA fabric. The independent operating nodes receive data 
+from up to four hybrids, applies calibrated thresholds and builds event frames in the firmware. A readout application from the JLab DAQ, 
+running on the ARM processor, pulls the event frames from memory via DMA and transfers the event frames to the JLab CODA event builder 
+over 10~Gb/s ethernet. 
+The COB also hosts a special RCE that handles the trigger and timing distribution across the processing nodes on each COB. 
+This RCE implements the JLab trigger interface 
+firmware and accepts the master and derived clocks together with trigger information from the JLab DAQ from a special fiber attached on the 
+custom rear transition board.  One of the RCEs is allocated to handle control, trigger and timing signals to and from all the hybrids. It also hosts the 
+slow control and environmental interfaces to the EPICS control system. 
 
-This contribution will discuss the first results from the HPS experiment. The achieved hit time resolution, tracking efficiency  and 
-momentum resolution will be presented that will pave the way for the first physics results. 
+During running the system operated at about 20~kHz and with data rates up to 150~MB/s. It has been tested to 50~kHz and 200~MB/s.
 
+
+\subsection{Performance}
+HPS first run with an electron beam was carried out in the spring of 2015. The primary goals of this engineering run was to prove existing 
+outstanding operational principles. Thanks to a 2-week extension of the running schedule HPS was able to take data with a fully functional 
+detector, beam current and size as specified in the requirements and the SVT in its design nominal position with sensors only 0.5~mm from the 
+the center of the beam.  In addition to commissioning, roughly 1/3 of a week of physics data was taken at the nominal operating point with 1.05~GeV 
+beam energy. 
+
+The SVT was operated with 180~V sensor high-voltage bias and had only five bad channels out of 23,040. Beam halos and occupancy was 
+measured as expected (see Fig.~\ref{fig:occupancy}). The preliminary results presented below shows that key performance variables behave as 
+expected at this early stage, where improvements in calibration and alignment is underway. A 2.2~ns time resolution can be extracted from the 
+difference between the hit and track time (average of the hit times on the track) seen in Fig.~\ref{fig:hit-time}. 
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{hittime2.png}
+\caption{Difference between the track time and hit time.}
+\label{fig:hit-time}
+\end{figure}
+Further optimizations on the pulse shape fit will likely improve this. For the \Aprime{} searches, the mass and vertex resolutions are key observables. 
+The mass resolution are calibrated using e.g. Mo\"ller events, see Fig.~\ref{fig:moller}, and data show good agreement with the expected distribution 
+from simulated events. 
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{moller2.png}
+\caption{Invariant mass of selected e$^-$e$^-$ pairs compatible with Mo\"ller kinematics in a fraction of the data collected.}
+\label{fig:moller}
+\end{figure}
+The vertex resolution, and with particular emphasis on it's positive tail, show reasonable 
+agreement with simulation at this stage. The vertex distribution of e$^+$e$^-$ pairs after a QED trident selection is shown in Fig.~\ref{fig:vertex}. 
+Understanding the tails of these type of distributions is fundamental to the displaced vertex search. 
+\begin{figure}[]
+\centering
+\includegraphics[width=3.0in]{golden-36-2.png}
+\caption{Fitted vertex distribution of e$^+$e$^-$ pairs selected using a QED trident events for a small fraction of the data.}
+\label{fig:vertex}
+\end{figure}
+Ongoing data analysis results from this run is expected in 2016. 
+
+\subsection{Summary and Outlook}
+The HPS experiment is a new fixed-target experiment in Hall~B at JLab searching for a heavy photon, or \Aprime{},  produced in a 
+bremsstrahlung-like process with the CEBAF accelerator beam interacting with a thin tungsten foil. HPS searched for visible decays of the \Aprime{ 
+to an e$^+$e$^-$ pair in the \Aprime{} 20-500~MeV/$c^2$ mass range. The signal signature is two-fold: a bump-hunt search in the invariant mass 
+spectrum on top of a large continuous QED trident background and a low background displaced vertex search to discover \Aprime{} if they are 
+long-lived. 
+
+The experiment employs a silicon vertex tracker (SVT), triggered by a fast lead-tungstate electromagnetic calorimeter with good time resolution, to 
+measure the trajectories of the \Aprime{} decays. The SVT has six layers of silicon microstrip sensor pairs with 50-100~mrad stereo angle distributed 
+over approximately 80~cm. In order to reach the prompt vertex rejection needed, the first layer is placed only 10~cm behind the target. To avoid 
+the majority of the scattered beam, the SVT is split in two halves around the beam plane with a 15~mrad dead zone placing the innermost sensors 
+0.5~mm from the center of the beam. In addition to the design challenges of having a retractable, actively cooled silicon detector in beam vacuum 
+the material in the tracking volume needs to be minimized with typical electron momenta between 0.5-2~GeV/c. Spring-tensioned, carbon fiber 
+backed, tracking modules are built with less than 0.1\% radiation length of support material for each 3D space point.  
+A 2~ns time resolution, needed to reject 
+out-of-time background in the nearly continuous beam, is obtained by reading out and fitting six samples of the pulse shape from APV25 ASIC. 
+The SVT was installed, commissioned and operated under nominal conditions during an engineering run in 2015.  Preliminary results suggests 
+expected performance and blinded \Aprime{} searches based on roughly 1/3 week of data are underway.
 
 
 
@@ -350,15 +565,15 @@ momentum resolution will be presented that will pave the way for the first physi
 
 
 
-\appendices
-\section{}
-If  I need an appendix it should go here.
+%\appendices
+%\section{}
+%If  I need an appendix it should go here.
 
 % use section* for acknowledgement
 \section*{Acknowledgment}
 The authors are grateful for the support from Hall~B at JLab and especially the Hall~B engineering 
 group for support during installation and decommissioning. They also would like to commend the 
-CEBAF personnel for good beam performance, especially the last few hours of operating CEBAF6. 
+CEBAF personnel for good beam performance during the spring run of 2015. 
 The tremendous support from home institutions and supporting staff also needs praise from the 
 authors. 
 %Work supported by the U.S. Department of Energy under contract number DE-AC02-76SF00515, 
@@ -396,6 +611,10 @@ authors.
 
 \begin{thebibliography}{1}
 
+
+
+
+
 \bibitem{pamela}
 O. Adriani {\it et al.} [PAMELA Collaboration], Nature {\bf 458}, 607 (2009) 
 %[arXiv:0810.4995 [astro- ph]],
@@ -432,14 +651,18 @@ Phys. Lett. B {\bf 136} (1984) 279
   %%CITATION = ARXIV:1205.2671;%%
 %\bibitem{apex1} 
 %R.Essig et al, JHEP1102,009(2011)[arXiv:1001.2557 [hep-ph]].
-\bibitem{darkforces}
-ÒDark2012: Dark Forces at AcceleratorsÓ, http://www.lnf.infn.it/conference/dark/index.php
+%\bibitem{darkforces}
+%ÒDark2012: Dark Forces at AcceleratorsÓ, http://www.lnf.infn.it/conference/dark/index.php
 %\bibitem{apex} 
 %S. Abrahamyan et al. [APEX Collaboration], Phys. Rev. Lett. 107, 191804 (2011) [arXiv:1108.2750 [hep-ex]].
 %\bibitem{mami} 
 %H. Merkel et al. [A1 Collaboration], Phys. Rev. Lett. 106, 251802 (2011) [arXiv:1101.4091 [nucl-ex]].
 %\bibitem{darklight}  
 %M. Freytsis et al, ÒDark Force Detection in Low Energy E-P Colli- sions,Ó JHEP 1001 (2010) 111 [arXiv:0909.2862 [hep-ph]].
+
+\bibitem{proposal_full}
+A. Grillo {\it et al.} [HPS Collaboration], JLab PAC37 PR-11-006, http://www.jlab.org/exp prog/PACpage/PAC37/proposals/Proposals/
+
 \bibitem{bible} J. D. Bjorken, R. Essig, P. Schuster and N. Toro, Phys. Rev. D {\bf 80}, 075018 (2009) [arXiv:0906.0580 [hep-ph]].
 %\bibitem{hiddensector1} M. Goodsell and A. Ringwald, ÒLight hidden-sector U(1)s in string compactifications,Ó Fortsch. Phys. 58, 716 (2010) [arXiv:1002.1840 [hep-th]].
 %\bibitem{hiddensector1}  P. Candelas, G. T. Horowitz, A. Strominger and E. Witten, ÒVacuum Configurations for Superstrings,Ó Nucl. Phys. B 258, 46 (1985).
@@ -462,12 +685,17 @@ Phys. Lett. B {\bf 136} (1984) 279
 %M. Reece and L. T. Wang, 
 %ÒSearching for the Light Dark Gauge Boson in Gev-Scale Experi-ments,Ó JHEP 0907 (2009) 051 [arXiv:0904.1743 [hep-ph]],
 %B. Aubert et al. [BABAR Collaboration], Phys. Rev. Lett. 103, 081803 (2009) [arXiv:0905.4539 [hep-ex]].
-\bibitem{proposal_full}
-A. Grillo {\it et al.} [HPS Collaboration], JLab PAC37 PR-11-006, http://www.jlab.org/exp prog/PACpage/PAC37/proposals/Proposals/
+\bibitem{fadc250}
+E.Jastrzembski and H. Dong, https://coda.jlab.org/drupal/content/vme-payload-modules
+%https://coda.jlab.org/drupal/system/files/pdfs/HardwareManual/fADC250/FADC250%20data%20format%20V23.pdf
+\bibitem{dose}
+Rashevskaya {\it et~al.}, Radiation damage of silicon structures with electrons of 900-MeV, Nucl. Instr. Meth. A, {\bf 485}, 126-132, (2002)
 \bibitem{d0run2b}
 D. S. Denisov and S. Soldner-Rembold, FERMILAB-PROPOSAL-0925.
 \bibitem{apv25}
-M.J. French {\it et al.}, Nucl. Instr. Meth. A, {\bf 466}, 359-365 (2001)
+M.J. French {\it et al.}, Design and results from the APV25, a deep sub-micron CMOS front-end chip for the CMS tracker , Nucl. Instr. Meth. A, {\bf 466}, 359-365 (2001)
+\bibitem{Friedl:2009zz}
+Friedl {\it et~al.} (2009), Readout of silicon strip detectors with position and timing information, Nucl. Instr. Meth. A, {\bf 598}, 82-83 (2009)
 \bibitem{paper_testrun}
 P. Hansson Adrian {\it et al.} [HPS Collaboration], The Heavy Photon Search test detector, Nucl. Instr. Meth. A 777 (2015), 91-101, http://dx.doi.org/10.1016/j.nima.2014.12.017
 %M. Battaglieri, S. Boyarinov, S. Bueltmann, V. Burkert, A. Celentano, G. Charles, W. Cooper, C. Cuevas, N. Dashyan, R. DeVita, C. Desnault, A. Deur, H. Egiyan, L. Elouadrhiri, R. Essig, V. Fadeyev, C. Field, A. Freyberger, Y. Gershtein, N. Gevorgyan, F.-X. Girod, N. Graf, M. Graham, K. Griffioen, A. Grillo, M. Guidal, G. Haller, P. Hansson Adrian, R. Herbst, M. Holtrop, J. Jaros, S. Kaneta, M. Khandaker, A. Kubarovsky, V. Kubarovsky, T. Maruyama, J. McCormick, K. Moffeit, O. Moreno, H. Neal, T. Nelson, S. Niccolai, A. Odian, M. Oriunno, R. Paremuzyan, R. Partridge, S.K. Phillips, E. Rauly, B. Raydo, J. Reichert, E. Rindel, P. Rosier, C. Salgado, P. Schuster, Y. Sharabian, D. Sokhan, S. Stepanyan, N. Toro, S. Uemura, M. Ungaro, H. Voskanyan, D. Walz, L.B. Weinstein, B. Wojtsekhowski, The Heavy Photon Search test detector, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, Volume 777, 21 March 2015, Pages 91-101, ISSN 0168-9002, http://dx.doi.org/10.1016/j.nima.2014.12.017
