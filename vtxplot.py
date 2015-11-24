@@ -1,4 +1,4 @@
-from ROOT import TFile, TH1F, TCanvas, TLatex
+from ROOT import TFile, TH1F, TCanvas, TLatex, TLegend
 
 def myText(x,y,text, tsize,color):
     l = TLatex()
@@ -21,6 +21,9 @@ n_mc = h_mc.Integral()
 print n_data, ' , ', n_mc
 h_mc.Scale(n_data/n_mc)
 
+leg = TLegend(0.67,0.5,0.86,0.73)
+leg.SetFillColor(0)
+leg.SetBorderSize(0)
 c = TCanvas('c','c',10,10,700,500)
 h_mc.SetTitle(";Radiative vertex z (mm);Arbitrary units")
 h_mc.GetXaxis().SetTitleSize(0.05)
@@ -32,6 +35,9 @@ h_mc.Draw("hist")
 h_data.SetMarkerStyle(20)
 h_data.SetMarkerSize(1.0)
 h_data.Draw("same")
+leg.AddEntry(h_mc,'Simulation','FL')
+leg.AddEntry(h_data,'Data','P')
+leg.Draw()
 myText(0.58,0.84,'m_{e^{+}e^{-}} = 38.5-42.9 MeV',0.05,1)
 myText(0.15,0.8,'Preliminary',0.08,2)
 c.SetLogy(True)

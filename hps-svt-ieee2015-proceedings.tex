@@ -95,7 +95,7 @@ Associates, LLC under under U.S. Department of Energy contract No. DE-AC05-06OR2
 \thispagestyle{empty}
 
 \begin{abstract}
-The Heavy Photon Search (HPS) is a new, dedicated experiment at Thomas Jefferson National Accelerator Facility (JLab) to search for a massive vector boson, the heavy photon (a.k.a. dark photon, \Aprimebold{}), in the mass range 20-500~MeV/c$^{2}$ and with a weak coupling to ordinary matter. An \Aprimebold{} can be radiated from an incoming electron as it interacts with a charged nucleus in the target, accessing a large open parameter space where the \Aprimebold{} is relatively long-lived, leading to displaced vertices. HPS searches for these displaced \Aprimebold{} to e$^+$e$^-$ decays using actively cooled silicon microstrip sensors with fast readout electronics placed immediately downstream of the target and inside a dipole magnet to instrument a large acceptance with a relatively small detector. With typical particle momenta of 0.5-2~GeV/c, the low material budget of 0.7\% $\mathbf{X_0}$ per tracking layer is key to limiting the dominating multiple scattering uncertainty and allowing efficient separation of the decay vertex from the prompt QED trident background processes. Achieving the desired low-mass acceptance requires placing the edge of the silicon only 0.5~mm from the electron beam. This results in localized hit rates above 4~MHz/mm$^2$ and radiation levels above $\mathbf{10^{14}}$ 1~MeV neutron equivalent /cm$^2$ dose. Hit timing at the ns level is crucial to reject out-of time hits not associated with the \Aprimebold{} decay products from the almost continuous CEBAF accelerator beam. To avoid excessive beam-gas interactions the tracking detector is placed inside the accelerator beam vacuum envelope and is retractable to allow safe operation in case of beam motion. This contribution will discuss the design, construction 
+The Heavy Photon Search (HPS) is a new, dedicated experiment at Thomas Jefferson National Accelerator Facility (JLab) to search for a massive vector boson, the heavy photon (a.k.a. dark photon, \Aprimebold{}), in the mass range 20-500~MeV/c$^{2}$ and with a weak coupling to ordinary matter. An \Aprimebold{} can be radiated from an incoming electron as it interacts with a charged nucleus in the target, accessing a large open parameter space where the \Aprimebold{} is relatively long-lived, leading to displaced vertices. HPS searches for these displaced \Aprimebold{} to e$^+$e$^-$ decays using actively cooled silicon microstrip sensors with fast readout electronics placed immediately downstream of the target and inside a dipole magnet to instrument a large acceptance with a relatively small detector. With typical particle momenta of 0.5-2~GeV/c, the low material budget of 0.7\% $\mathbf{X_0}$ per tracking layer is key to limiting the dominant multiple scattering uncertainty and allowing efficient separation of the decay vertex from the prompt QED trident background processes. Achieving the desired low-mass acceptance requires placing the edge of the silicon only 0.5~mm from the electron beam. This results in localized hit rates above 4~MHz/mm$^2$ and radiation levels above $\mathbf{10^{14}}$ 1~MeV neutron equivalent /cm$^2$ dose. Hit timing at the ns level is crucial to reject out-of time hits not associated with the \Aprimebold{} decay products from the almost continuous CEBAF accelerator beam. To avoid excessive beam-gas interactions the tracking detector is placed inside the accelerator beam vacuum envelope and is retractable to allow safe operation in case of beam motion. This contribution will discuss the design, construction 
 and first performance results from the first data-taking period in the spring of 2015. 
 \end{abstract}
 
@@ -147,13 +147,13 @@ rendered overview of HPS is shown in Fig.~\ref{fig:hps-layout}.
 \label{fig:hps-layout}
 \end{figure}
 
-HPS run in Hall~B at Thomas Jefferson National Accelerator Facility (JLab) using the CEBAF 
+HPS runs in Hall~B at Thomas Jefferson National Accelerator Facility (JLab) using the CEBAF 
 accelerator electron beam with an energy of 1.05~GeV and 50~nA current, with planned operation of up to 6.6~GeV and 450~nA. 
 The kinematics of \Aprime{} production 
-typically results in final state particles within a few degrees of the beam, especially at low $m_{\Aprime}$ . 
+typically result in final state particles within a few degrees of the beam, especially at low $m_{\Aprime}$ . 
 Because of this, the detector must accommodate passage of the beam 
 downstream of the target and operate as close to the beam as possible. Because background rates in this region from the 
-scattered beam are very large, a fast lead-tungstate crystal calorimeter trigger with 250~MHz Flash ADC readout~\cite{fadc250} and 
+scattered beam are very large, a fast lead-tungstate crystal calorimeter trigger with 250~MHz flash ADC readout~\cite{fadc250} and 
 excellent time tagging of hits is used to trigger on interesting events and reduce the bandwidth required to transfer data from the 
 detector.  This method of background reduction is the motivation for operating HPS in a
 nearly continuous beam: in a beam with large per-bunch charge, background from a single bunch would fully occupy the detector 
@@ -165,7 +165,7 @@ at the required beam intensity.
 The Silicon Vertex Tracker (SVT) allows for precise and efficient reconstruction of charged particles and their trajectories. 
 %The design was driven mainly by the specific physics signature of \Aprime{} production and decay and the constraints from the environment 
 %at the interaction region. 
-At beam energies between 1.0-6.6~GeV, the $e^{+} and e^{-}$ from the \Aprime{}  
+At beam energies between 1.0-6.6~GeV, the electron and positron from the \Aprime{}  
 decay will be produced with momenta in the range of 0.4-2~GeV$/c$ and angles of 10-100~mrad from the beam. The dominant 
 tracking uncertainty in this regime is multiple Coulomb scattering, so the SVT needs to minimize the amount of material in the tracking 
 volume. With an approximate goal of 2\% mass resolution in the 1~m long tracking volume (determined by an existing magnet and vacuum 
@@ -295,7 +295,8 @@ Modules are built by placing two half-modules back-to-back sandwiched around a a
 cooling block serves as the fixed part of a support where the opposite end of the half-modules are screwed to an aluminum 
 bar with a pivot engaging a screw-adjusted spring, as shown in Fig.~\ref{fig:half-modules-L1-3}. 
 This spring-tensioned module support allows holding the sensors, with their carbon fiber backing, straight with very little support material 
-and absorbing thermal expansion mismatch. The same principle is used for layer 4-6 where one of the cooling blocks are pinned to the spring. 
+and absorbs thermal expansion mismatch. The same principle is used for layer 4-6 where the cooling block at one end has an integrated 
+spring pivot.
 \begin{figure}[]
 \centering
 \includegraphics[width=3.0in]{uchannel-L4-6.png}
